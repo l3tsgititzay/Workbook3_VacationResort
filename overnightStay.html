@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>overnightStay</title>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="overnightStay.html">overnightStay</a> |
+
+    </nav>
+<br>
+
+   Name:            <input id="text" id="name"/> |
+   <br>
+   Email:          <input type="email" id="email"/> |
+<br>
+   Check-in Date: <label for="datePicker"> </label>
+    <input date="" id="datePicker" />
+    <br>
+    <label for="nights">Number of Nights for Your Visit (1-28 days):</label>
+
+    <input type="number" id="numberNights"  min="1" max="28" value="1">
+    <br>
+    <input type="radio" name= "bedroom" id= "room"
+            value="Queen"> Queen room <br>
+            
+            <input type="radio" name= "bedroom" id= "room"
+            value="King"> King room <br>
+    
+            <input type="radio" name= "bedroom" id= "room"
+            value="2"> 2-Bedroom Suite <br>
+            
+        <br>
+            <label for="Adults">Number of Adults (1-4):</label>
+            <br>
+
+            <label for="nights">Number of children(0-4 ):</label>
+<script> 
+    window.onload = init;
+
+    function init(){
+        let btn = document.getElementById("submitForm");
+        btn.onclick = handleSubmitForm;
+    
+        function handleSubmitForm(){
+            let date = document.getElementById("dateInput");
+            let datePlaceholder = document.getElementById("datePlaceholder");
+            let convertedDate = new Date(date.value);
+            datePlaceholder.innerHTML = convertedDate.toLocaleDateString();
+        }
+    }
+</script>
+
+   
+</body>
+
+</html>
